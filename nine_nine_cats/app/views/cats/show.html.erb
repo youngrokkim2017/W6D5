@@ -1,0 +1,55 @@
+<table width=300px>
+  <thead>
+      <tr>
+        <th colspan="4"> <%= @cat.name %> </th>
+      </tr>
+  </thead>
+    
+  <tbody>
+    <tr>
+      <td colspan="1">Color</td>
+      <td colspan="3"><%= @cat.color %> </td>
+    </tr>
+
+    <tr>
+      <td colspan="1">Birth Date</td>
+      <td colspan="3"><%= @cat.birth_date %> </td>
+    </tr>
+
+    <tr>
+      <td colspan="1">Sex</td>
+      <td colspan="3"><%= @cat.sex %> </td>
+    </tr>
+
+    <tr>
+      <td colspan="1">Description</td>
+      <td colspan="3"><%= @cat.description %> </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<table width=600px>
+  <thead>
+      <tr>
+        <th colspan="4"> <%= @cat.name %>'s Requests </th>
+      </tr>
+      <tr>
+        <td colspan="1">Start Date</td>
+        <td colspan="1">End Date</td>
+        <td colspan="2">Status</td>
+      </tr>
+  </thead>
+    
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td colspan="1"><%= request.start_date %></td>
+        <td colspan="1"><%= request.end_date %></td>
+        <td colspan="2"><%= request.status %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
